@@ -1,0 +1,14 @@
+Un paquete se define como una secuencia de nombres
+separados por ".".
+Ej. Directorio1.Subdirectorio1.NombreModulo
+Todo subdirectorio de un paquete debe contener un
+fichero __init.py__ (puede contener código de inicialización del paquete).
+__all__ (dentro de __init.py__) define la lista de módulos que
+deberían importarse cuando se encuentra from package import *.
+Ej. __all__ = ["echo", "surround", "reverse"]
+
+Relative imports
+================
+from . import echo
+from .. import formats
+from ..filters import equalizer
